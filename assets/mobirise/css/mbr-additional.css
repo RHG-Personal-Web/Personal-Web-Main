@@ -409,9 +409,5 @@ h6,
   color: #c0a375;
 }
 .scrollToTop_wraper {
-  opacity: 0 !important;
-}
-#header3-b .mbr-section-title,
-#header3-b .mbr-section-subtitle {
-  text-align: center;
+  display: none;
 }
