@@ -51,10 +51,9 @@
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
-                    <h1 class="mbr-section-title display-1">Welcome,</h1>
-                    <h4 class="mbr-section-title display-1">Rusty</h1>
+                    <h1 class="mbr-section-title display-1">Good <span id="time"></span>, Rusty</h1>
                    <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
-                    <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p>
+                    <p class="mbr-section-lead lead">"If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You." – Steve Jobs</p>
                     <div class="mbr-section-btn">
                       <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
                       <a class="btn btn-lg btn-white btn-white-outline" href="https://classrooms.google.com">Classrooms</a>
@@ -90,3 +89,19 @@
     
     document.querySelector('mbr-section-lead lead') = quote;
 </script> -->
+
+<script>
+    var today = new Date()
+var curHr = today.getHours()
+var time = null;
+
+if (curHr < 12) {
+  var time = "Morning";
+} else if (curHr < 18) {
+  var time = "Afternoon";
+} else {
+  var time = "Evening";
+}
+
+document.getElementById("time").innerHTML = time;
+</script>
