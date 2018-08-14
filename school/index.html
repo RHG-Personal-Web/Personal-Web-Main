@@ -93,18 +93,18 @@
 <script>
     var today = new Date()
 var curHr = today.getHours()
-var time = null;
+var timenow = null;
 
 if (curHr < 12) {
-  var time = "Morning";
+  timenow = "Morning";
 } else if (curHr < 18) {
-  var time = "Afternoon";
+  timenow = "Afternoon";
 } else {
-  var time = "Evening";
+  timenow = "Evening";
 }
 
-document.getElementById("time").innerHTML = time;
-document.getElementById("timetitle").innerHTML = time;
+document.getElementById("time").innerHTML = timenow;
+document.getElementById("timetitle").innerHTML = timenow;
     
     
   fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
