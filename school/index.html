@@ -114,6 +114,7 @@ document.getElementById("time").innerHTML = timenow;
       document.getElementById("quote").innerHTML = data.message
     })
     .catch(function () {
+      document.getElementById("quote").innerHTML = "An error occurred"
       console.log("An error occurred");
     });
 </script>
