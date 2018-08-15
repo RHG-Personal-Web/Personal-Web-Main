@@ -107,7 +107,7 @@ if (curHr < 12) {
 document.getElementById("time").innerHTML = timenow;
  
     
-  <!-- fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+   fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
     .then(function (response) {
       return response.json();
     })
@@ -117,7 +117,7 @@ document.getElementById("time").innerHTML = timenow;
     .catch(function () {
       document.getElementById("quote").innerHTML = "An error occurred"
       console.log("An error occurred");
-    }); -->
+    });
       
     fetch("http://quotesondesign.com/api/3.0/api-3.0.json")
     .then(function (response) {
