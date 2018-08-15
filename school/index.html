@@ -43,7 +43,7 @@
 </head>
 <body>
   <!-- <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);"> -->
-    <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(<span id="background">../assets/images/adult-alone-blur-1172207.jpg</span>);">
+    <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(../assets/images/adult-alone-blur-1172207.jpg)</span>;">
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
         
     <div class="mbr-table-cell">
@@ -149,16 +149,17 @@ if (today.getMinutes() < 10 ) {
 }  
 if (curHr < 12) {
   document.getElementById("time").innerHTML = "Morning";
-  // document.getElementById("background").innerHTML = MorningImg[Math.floor((Math.random() * MorningImg.length))]
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
 } else if (curHr < 18) {
   document.getElementById("time").innerHTML = "Afternoon";
-  // document.getElementById("background").innerHTML = AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))]
+  // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
 } else if (curHr < 20){
   document.getElementById("time").innerHTML = "Evening"
-  // document.getElementById("background").innerHTML = MorningImg[Math.floor((Math.random() * MorningImg.length))]
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
 } else {
   document.getElementById("time").innerHTML = "Night"
-   document.getElementById("background").innerHTML = EveningImg[Math.floor((Math.random() * EveningImg.length))]
+    
+   document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 }
  
   fetch("https://talaikis.com/api/quotes/random/")
