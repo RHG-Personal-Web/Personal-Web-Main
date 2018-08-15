@@ -37,13 +37,11 @@
   <link rel="stylesheet" href="../assets/animate.css/animate.min.css">
   <link rel="stylesheet" href="../assets/theme/css/style.css">
   <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
+    
 </head>
 <body>
-  <!-- <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);"> -->
-    <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(../assets/images/adult-alone-blur-1172207.jpg)</span>;">
+   <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);">
+    <!-- <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(../assets/images/adult-alone-blur-1172207.jpg)</span>;"> -->
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
         
     <div class="mbr-table-cell">
@@ -52,7 +50,7 @@
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
-                    <h1 class="mbr-section-title display-1">Good <span id="time"></span>, <span id="username">Rusty</span></h1>
+                    <h1 class="mbr-section-title display-1"><span id="timeprefix">Good</span> <span id="time"></span>, <span id="username">Rusty</span></h1>
                     <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
                    <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
                    <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
@@ -129,6 +127,9 @@ var EveningImg = [
 if (params.name && params.name != "") {
     document.getElementById("username").innerHTML = params.name
 }
+if (params.prefix && params.prefix != "") {
+    document.getElementById("timeprefix").innerHTML = params.prefix
+}
     
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
@@ -158,8 +159,7 @@ if (curHr < 12) {
   // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
 } else {
   document.getElementById("time").innerHTML = "Night"
-    
-   document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
+  // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 }
  
   fetch("https://talaikis.com/api/quotes/random/")
