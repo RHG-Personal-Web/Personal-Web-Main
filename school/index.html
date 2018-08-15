@@ -119,7 +119,7 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 var today = new Date()
 var curHr = today.getHours()
 
-document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDay() + ", " + today.getFullYear()
+document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear()
      
 if (curHr < 12) {
   document.getElementById("time").innerHTML = "Morning";
