@@ -93,33 +93,42 @@
 </script> -->
 
 <script>
-    var today = new Date()
+var MorningImg = [
+    "https://picsum.photos/1600/900/?image=412",
+    "https://picsum.photos/1600/900/?image=331",
+    "https://picsum.photos/1600/900/?image=337",
+    "https://picsum.photos/1600/900/?image=368"
+];
+  
+var AfternoonImg = [
+    "https://picsum.photos/1600/900/?image=297",
+    "https://picsum.photos/1600/900/?image=983",
+    "https://picsum.photos/1600/900/?image=944",
+    "https://picsum.photos/1600/900/?image=668",
+    "https://picsum.photos/1600/900/?image=29",
+    "https://picsum.photos/1600/900/?image=760"
+];
+    
+var EveningImg = [
+    "../assets/images/adult-alone-blur-1172207.jpg",
+    "https://picsum.photos/1600/900/?image=556",
+    "https://picsum.photos/1600/900/?image=391"
+];
+var today = new Date()
 var curHr = today.getHours()
-var timenow = null;
 
 if (curHr < 12) {
-  timenow = "Morning";
+  document.getElementById("time").innerHTML = "Morning";
+  document.getElementById("image").innerHTML = MorningImg[Math.floor(Math.random()*MorningImg.length)];
 } else if (curHr < 18) {
-  timenow = "Afternoon";
+  document.getElementById("time").innerHTML = "Afternoon";
+  document.getElementById("image").innerHTML = AfternoonImg[Math.floor(Math.random()*AfternoonImg.length)];
 } else {
-  timenow = "Evening";
+  document.getElementById("time").innerHTML = "Evening"
+  document.getElementById("image").innerHTML = EveningImg[Math.floor(Math.random()*EveningImg.length)];
 }
-
-document.getElementById("time").innerHTML = timenow;
- 
     
-   fetch("https://picsum.photos/1600/900?random")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      document.getElementById("image").innerHTML = data.post_url
-    })
-    .catch(function () {
-      console.log("An error occurred");
-    });
-      
-    fetch("https://talaikis.com/api/quotes/random/")
+  fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
       return response.json();
     })
