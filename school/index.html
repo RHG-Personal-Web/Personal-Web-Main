@@ -53,7 +53,8 @@
 
                     <h1 class="mbr-section-title display-1">Good <span id="time"></span>, Rusty</h1>
                    <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
-                    <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p>
+                   <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
+                    <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
                       <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
                       <a class="btn btn-lg btn-white btn-white-outline" href="https://classrooms.google.com">Classrooms</a>
@@ -106,12 +107,24 @@ if (curHr < 12) {
 document.getElementById("time").innerHTML = timenow;
  
     
-  fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+  <!-- fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       document.getElementById("quote").innerHTML = data.message
+    })
+    .catch(function () {
+      document.getElementById("quote").innerHTML = "An error occurred"
+      console.log("An error occurred");
+    }); -->
+      
+    fetch("http://quotesondesign.com/api/3.0/api-3.0.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
     })
     .catch(function () {
       document.getElementById("quote").innerHTML = "An error occurred"
