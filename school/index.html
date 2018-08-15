@@ -42,7 +42,8 @@
   
 </head>
 <body>
-  <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);">
+  <!-- <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);"> -->
+    <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url();">
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
         
     <div class="mbr-table-cell">
@@ -51,7 +52,7 @@
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
-                    <h1 class="mbr-section-title display-1">Good <span id="time"></span>, Rusty</h1>
+                    <h1 class="mbr-section-title display-1">Good <span id="time"></span>, <span id="username">Rusty</span></h1>
                     <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
                    <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
                    <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
@@ -94,6 +95,15 @@
 </script> -->
 
 <script>
+var params = {},
+pairs = document.URL.split('?')
+    .pop()
+    .split('&');
+
+for (var i = 0, p; i < pairs.length; i++) {
+    p = pairs[i].split('=');
+    params[ p[0] ] =  p[1];
+} 
 var MorningImg = [
     "https://picsum.photos/1600/900/?image=412",
     "https://picsum.photos/1600/900/?image=331",
@@ -115,6 +125,10 @@ var EveningImg = [
     "https://picsum.photos/1600/900/?image=556",
     "https://picsum.photos/1600/900/?image=391"
 ];
+
+if (params.name && params.name != "") {
+    document.getElementById("username").innerHTML = params.name
+}
     
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
