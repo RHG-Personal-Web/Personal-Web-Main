@@ -129,6 +129,23 @@ if (params.name && params.name != "") {
 }
 if (params.prefix) {
     document.getElementById("timeprefix").innerHTML = params.prefix
+} else if (params.prefix == "") {
+    document.getElementById("timeprefix").innerHTML = ""
+}
+    
+if (!params.quote || params.quote == "") {
+  fetch("https://talaikis.com/api/quotes/random/")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
+    })
+    .catch(function () {
+      console.log("An error occurred");
+    });
+} else {
+    document.getElementById("quote").innerHTML = params.quote
 }
     
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -161,15 +178,4 @@ if (curHr < 12) {
   document.getElementById("time").innerHTML = "Night"
   // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 }
- 
-  fetch("https://talaikis.com/api/quotes/random/")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
-    })
-    .catch(function () {
-      console.log("An error occurred");
-    });
 </script>
