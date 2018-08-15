@@ -41,7 +41,8 @@
   
 </head>
 <body>
-  <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);">
+  <!-- <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);"> -->
+    <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(<span id="image"></span>);">
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
     
 
@@ -107,19 +108,18 @@ if (curHr < 12) {
 document.getElementById("time").innerHTML = timenow;
  
     
-   fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+   fetch("https://picsum.photos/1600/900?random")
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      document.getElementById("quote").innerHTML = data.message
+      document.getElementById("image").innerHTML = data.post_url
     })
     .catch(function () {
-      document.getElementById("quote").innerHTML = "An error occurred"
       console.log("An error occurred");
     });
       
-    fetch("http://quotesondesign.com/api/3.0/api-3.0.json")
+    fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
       return response.json();
     })
@@ -127,7 +127,6 @@ document.getElementById("time").innerHTML = timenow;
       document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
     })
     .catch(function () {
-      document.getElementById("quote").innerHTML = "An error occurred"
       console.log("An error occurred");
     });
 </script>
