@@ -52,17 +52,18 @@
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
                     <h1 class="mbr-section-title display-1">Good <span id="time"></span>, Rusty</h1>
-                    <h4 class="mbr-section-title display-4">It is <span id="curtime"></span></h4>
+                    <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
                    <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
                    <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
                     <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
                       <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
-                      <a class="btn btn-lg btn-white btn-white-outline" href="https://classrooms.google.com">Classrooms</a>
+                      <a class="btn btn-lg btn-success" href="http://www.na.sevier.org/">Main</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://classroom.google.com">Classrooms</a>
                       <!-- <a class="btn btn-lg btn-white btn-white-outline" href="https://LINK">TEXT GOES HERE</a> -->
-                       <a class="btn btn-lg btn-white btn-white-outline" href="https://sis-sevier.tnk12.gov/scripts/wsisa.dll/WService=wsSEVStu/sfemnu01.w">Skyward</a> 
-                       <!--m<a class="btn btn-lg btn-white btn-white-outline" href="https://LINK">TEXT GOES HERE</a> 
-                       <a class="btn btn-lg btn-white btn-white-outline" href="https://LINK">TEXT GOES HERE</a>  -->
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://sis-sevier.tnk12.gov/scripts/wsisa.dll/WService=wsSEVStu/sfemnu01.w">Skyward</a> 
+                      <!--m<a class="btn btn-lg btn-white btn-white-outline" href="https://LINK">TEXT GOES HERE</a> 
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://LINK">TEXT GOES HERE</a>  -->
                     </div>
                 </div>
             </div>
@@ -117,6 +118,7 @@ var EveningImg = [
     
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+    
 var today = new Date()
 var curHr = today.getHours()
 var timetype = null;
@@ -126,9 +128,11 @@ if (curHr < 12) {
 } else {
   timetype = "PM";
 }
-
-document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
-     
+if (today.getMinutes() < 10 ) {
+    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":0" + today.getMinutes() + " " + timetype
+} else {
+    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
+}  
 if (curHr < 12) {
   document.getElementById("time").innerHTML = "Morning";
 } else if (curHr < 18) {
