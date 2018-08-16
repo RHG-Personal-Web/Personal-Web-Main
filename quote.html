@@ -34,9 +34,9 @@
         <div class="container">
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
-                    <p class="mbr-section-lead lead"><span id="quote">Loading an new random quote...</span></p>
+                    <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
-                      <a class="btn btn-lg btn-white btn-white-outline" onclick="newQuote();">New Quote</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" onclick="newQuote();"><span id="buttontext">New Quote</span></a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,8 @@
 <script>
 
 function newQuote () {
-  document.getElementById("quote").innerHTML = "Loading an new random quote...";
+  document.getElementById("buttontext").innerHTML = "Loading"
+  // document.getElementById("quote").innerHTML = "";
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
       return response.json();
@@ -74,8 +75,7 @@ function newQuote () {
     .catch(function () {
       console.log("An error occurred");
     });
+  document.getElementById("buttontext").innerHTML = "New Quote"
 }
-document.ready(function () {
-  newQuote();
-});
+newQuote();
 </script>
