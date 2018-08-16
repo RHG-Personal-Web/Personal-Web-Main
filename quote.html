@@ -34,9 +34,9 @@
         <div class="container">
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
-                    <p class="mbr-section-lead lead"><span id="quote"></span></p>
+                    <p class="mbr-section-lead lead"><span id="quote">Loading...</span></p>
                     <div class="mbr-section-btn">
-                      <a class="btn btn-lg btn-white btn-white-outline">New Quote</a>
+                      <a class="btn btn-lg btn-white btn-white-outline onclick="newQuote();"">New Quote</a>
                     </div>
                 </div>
             </div>
@@ -62,8 +62,8 @@
 
 <script>
 
-myFunction () {
-  document.getElementById("demo").innerHTML = "Hello World";
+newQuote () {
+  document.getElementById("quote").innerHTML = "Loading...";
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
       return response.json();
@@ -76,6 +76,5 @@ myFunction () {
     });
 }
   
-document.getElementById("clickMe").onclick = doFunction;
-myFunction()
+newQuote()
 </script>
