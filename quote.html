@@ -36,7 +36,7 @@
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
                     <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
-                      <a class="btn btn-lg btn-white btn-white-outline" onclick="myFunction()">New Quote</a>
+                      <a class="btn btn-lg btn-white btn-white-outline">New Quote</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 
 <script>
 
-ifunction myFunction() {
+myFunction () {
   document.getElementById("demo").innerHTML = "Hello World";
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
@@ -76,5 +76,6 @@ ifunction myFunction() {
     });
 }
   
+document.getElementById("clickMe").onclick = doFunction;
 myFunction()
 </script>
