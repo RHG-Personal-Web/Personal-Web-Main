@@ -146,29 +146,29 @@
     opacity: 0.85; }
 
 .btn-success {
-  background-color: #90a878;
-  border-color: #90a878;
+  background-color: #36393f;
+  border-color: #36393f;
   box-shadow: none;
   color: #fff; }
   .btn-success:hover {
     color: #fff;
-    background-color: #6a8153;
-    border-color: #6a8153;
+    background-color: #232529;
+    border-color: #232529;
     box-shadow: none; }
   .btn-success:focus, .btn-success.focus {
     color: #fff;
-    background-color: #6a8153;
-    border-color: #6a8153; }
+    background-color: #232529;
+    border-color: #232529; }
   .btn-success:active, .btn-success.active {
     color: #fff;
-    background-color: #6a8153;
-    border-color: #6a8153;
+    background-color: #232529
+    border-color: #232529;
     background-image: none;
     box-shadow: none; }
   .btn-success.disabled, .btn-success:disabled {
     color: #fff !important;
-    background-color: #6a8153 !important;
-    border-color: #6a8153 !important;
+    background-color: #232529 !important;
+    border-color: #232529 !important;
     opacity: 0.85; }
 
 .btn-warning {
