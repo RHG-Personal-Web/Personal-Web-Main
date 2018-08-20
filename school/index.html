@@ -164,4 +164,9 @@ if (curHr < 12) {
   document.getElementById("time").innerHTML = "Night"
   // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 }
+  
+var loc = window.location.href+'';
+if (loc.indexOf('http://')==0){
+    window.location.href = loc.replace('http://','https://');
+}
 </script>
