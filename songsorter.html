@@ -430,6 +430,11 @@
             };
 
             setInterval(function() { createCellObjects(i); i++}, 3000)
+		
+	var loc = window.location.href+'';
+  	if (loc.indexOf('https://')==0){
+      		window.location.href = loc.replace('https://','http://');
+ 	}
         </script>
 
     </body>
