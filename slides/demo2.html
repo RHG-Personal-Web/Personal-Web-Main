@@ -47,6 +47,7 @@
 			Reveal.configure({ showSlideNumber: 'speaker' });
 			Reveal.initialize({
 				dependencies: [
+					{ src: 'socket.io/socket.io.js', async: true },
 					{ src: 'plugin/notes-server/client.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
