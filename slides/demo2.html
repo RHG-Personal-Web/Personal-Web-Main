@@ -39,7 +39,6 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-		<script src="plugin/notes-server"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -55,15 +54,6 @@
 			Reveal.configure({ slideNumber: 'c/t' });
 			Reveal.configure({ showSlideNumber: 'speaker' });
 			Reveal.initialize({
-				multiplex: {
-					secret: '15387747025213914167',
-					id: '4fc89f135ae7d28d',
-					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
-				},
-				pubnubRemoteControl: {
-					subscribeKey: 'sub-c-a722ae88-c8e7-11e8-8f2a-6ea01b4be699',    // PubNub subscribe key,
-					publishKey: 'pub-c-7e1752ae-a39f-44d2-a597-4bb17c58ba84',        // PubNub publish key
-				},
 				dependencies: [
 					{ src: 'https://cdn.pubnub.com/pubnub-4.4.0.min.js', async: true },
 					{ src: 'plugin/pubnub-remote-control.js', async: true },
