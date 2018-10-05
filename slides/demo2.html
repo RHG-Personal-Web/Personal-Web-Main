@@ -36,6 +36,11 @@
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.configure({ 
+				controls: false,
+				controlsBackArrows: 'hidden',
+				history: false
+			});
 			Reveal.initialize({
 				dependencies: [
 					{ src: './plugin/markdown/marked.js' },
