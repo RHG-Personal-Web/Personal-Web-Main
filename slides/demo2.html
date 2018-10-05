@@ -39,8 +39,12 @@
 			Reveal.configure({ 
 				controls: false,
 				controlsBackArrows: 'hidden',
-				history: false
+				history: false,
+				transition: 'zoom',
+				help: false,
 			});
+			Reveal.configure({ slideNumber: 'c/t' });
+			Reveal.configure({ showSlideNumber: 'speaker' });
 			Reveal.initialize({
 				dependencies: [
 					{ src: './plugin/markdown/marked.js' },
