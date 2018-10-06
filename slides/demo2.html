@@ -54,6 +54,12 @@
 			Reveal.configure({ slideNumber: 'c/t' });
 			Reveal.configure({ showSlideNumber: 'speaker' });
 			Reveal.initialize({
+				multiplex: {
+					// Example values. To generate your own, see the socket.io server instructions.
+					secret: '15387896144375925192', // null so the clients do not have control of the master presentation
+					id: '6c6e152cc6ce1de1', // id, obtained from socket.io server
+					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of your socket.io server
+				},
 				//dependencies: []
 			});
 		</script>
