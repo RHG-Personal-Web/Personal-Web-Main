@@ -54,24 +54,7 @@
 			Reveal.configure({ slideNumber: 'c/t' });
 			Reveal.configure({ showSlideNumber: 'speaker' });
 			Reveal.initialize({
-				dependencies: [
-					{ src: 'https://cdn.pubnub.com/pubnub-4.4.0.min.js', async: true },
-					{ src: 'plugin/pubnub-remote-control.js', async: true },
-					
-					{ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-					{ src: 'plugin/multiplex/master.js', async: true },
-
-					// and if you want speaker notes
-					{ src: 'plugin/notes-server/client.js', async: true },
-					
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+				//dependencies: []
 			});
 		</script>
 	</body>
