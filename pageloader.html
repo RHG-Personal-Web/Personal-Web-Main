@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <meta http-equiv="refresh" content="60">
+  <meta property="og:site_name" content="RHG#0822">
+  <meta name="title" content="Rusty R. Huskey">
+  <meta name="description" content="Rusty Huskey's School page">
+  <meta name="theme-color" content="#36393f">
+  <meta property="og:image" content="https://cdn.discordapp.com/avatars/140487710727995392/ceb570a26a945cc37931a12e4925f311.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+  <link rel="stylesheet" href="../assets/tether/tether.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../assets/theme/css/style.css">
+  <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
+    
+</head>
+<body>
+   <iframe data-src=<span id="loadsite"></span> width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+</section>
+    
+  <script src="../assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="../assets/tether/tether.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="../assets/jarallax/jarallax.js"></script>
+  <script src="../assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="../assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>
+
+<!-- <script>
+    var quote = quotes[Math.floor((Math.random() * quotes.length))]
+    
+    document.querySelector('mbr-section-lead lead') = quote;
+</script> -->
+
+<script>
+var params = {},
+pairs = document.URL.split('?')
+    .pop()
+    .split('&');
+for (var i = 0, p; i < pairs.length; i++) {
+    p = pairs[i].split('=');
+    params[ p[0] ] =  decodeURIComponent(p[1]);
+
+if (params.site) {
+    document.getElementById("loadsite").innerHTML = params.site
+} else if (params.site == "") {
+    document.getElementById("loadsite").innerHTML = ""
+}
+  
+var loc = window.location.href+'';
+if (loc.indexOf('http://')==0){
+    window.location.href = loc.replace('http://','https://');
+}
+</script>
