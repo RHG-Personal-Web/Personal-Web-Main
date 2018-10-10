@@ -370,7 +370,9 @@ Reveal.addEventListener( 'customevent', function() {
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				transition: 'concave', // none/fade/slide/convex/concave/zoom
-
+				mouseWheel: true,
+				progress: false,
+				
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
